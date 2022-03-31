@@ -1,6 +1,7 @@
 let fs = require("fs");
 let path=require("path")
 let folderPath = process.argv[2];
+//Taking Input From Terminal 
 console.log(folderPath);
 
 let folderExists = fs.existsSync(folderPath);
@@ -34,8 +35,6 @@ if (folderExists) {
 }
 else {
   console.log("Please Enter a Valid Path!!!!");
-  
-// ['mp3','zip','jpeg','doc','mp4','xlsx','mkv','jpg','pdf','png','exe','gif','tar','rar']
 }
 
 
@@ -56,3 +55,4 @@ function moveFile(folderPath,pathOfFolder,fileName){
     fs.copyFileSync(sourcePath,destinationPath);
     fs.unlinkSync(sourcePath);
 }
+// :: Will Take Input From Terminal : node FileName.js "path"
